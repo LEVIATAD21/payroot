@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>GhostBank | Private Mobile Banking</title>
+    
+    <!-- Android App Meta Tags -->
+    <meta name="theme-color" content="#0A0C10">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="data:application/manifest+json,{'name':'GhostBank','short_name':'Ghost','start_url':'.','display':'standalone','background_color':'#0A0C10','theme_color':'#00F59B'}" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #0A0C10;
+            --accent: #00F59B;
+            --purple: #820AD1;
+        }
+        * {
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-main);
+            color: #FFFFFF;
+            overflow: hidden; /* Prevent body scroll, use container scroll */
+            touch-action: manipulation;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .fintech-gradient {
+            background: linear-gradient(135deg, #00F59B 0%, #820AD1 100%);
+        }
+        .android-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+        }
+        @keyframes ripple {
+            from { transform: scale(0); opacity: 0.4; }
+            to { transform: scale(4); opacity: 0; }
+        }
+        .ripple {
+            position: relative; overflow: hidden;
+        }
+        .ripple:after {
+            content: ""; position: absolute; border-radius: 50%; width: 100px; height: 100px;
+            background: rgba(255,255,255,0.2); transform: scale(0); opacity: 0; pointer-events: none;
+        }
+        .ripple:active:after {
+            animation: ripple 0.6s ease-out; top: 50%; left: 50%; margin: -50px 0 0 -50px;
+        }
+        /* Mobile Scrollbar */
+        ::-webkit-scrollbar { width: 0px; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

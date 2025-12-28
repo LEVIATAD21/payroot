@@ -1,0 +1,7 @@
+{
+  "name": "Copy of GhostBank - Decentralized & Untraceable",
+  "description": "Sistema bancário 100% anônimo baseado em protocolo de mixagem P2P. Conversão zero-fee e Pix invisível.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
